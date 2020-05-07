@@ -1,0 +1,40 @@
+<html>
+<head>
+<script language="JavaScript">
+var srcList = ["ImageAnimation/img1.png", 
+               "ImageAnimation/img2.png", 
+               "ImageAnimation/img3.png",  
+               "ImageAnimation/img4.png",  
+               "ImageAnimation/img5.png",  
+               "ImageAnimation/img6.png",  
+               "ImageAnimation/img7.png",  
+               "ImageAnimation/img8.png" ];		   
+var index = 0;
+var loopCount = 0;
+
+
+function begin()
+{
+
+    index = index +1;
+    if( index > 7) // larger than 8 will error.
+    {
+    index = 0;
+    }
+
+    document.getElementById("myPic").src = srcList[index];
+    setTimeout("begin()", 1000);
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Put a title here</h1>
+<img id="myPic" src="ImageAnimation/img1.png" width="600"/>
+
+<br/><br/>
+<input type="button" value="Start!" onclick="begin()">
+
+</center>
+</body>
+</html>
